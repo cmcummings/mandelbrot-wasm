@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandelbrot</title>
+    <script type="module" src="/src/index.ts"></script>
+    <link href="/main.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="options">
+      <label>x</label>
+      <input class="option-input" type="number" />
+    </div>
+    <main>
+      <p>Drag to select a section to zoom into. Hold Shift to select a section with aconsistent aspect ratio.</p>
+      <canvas id="canvas" width=960 height=540></canvas>
+    </main>
+  </body>
+</html>
