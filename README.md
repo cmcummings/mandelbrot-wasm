@@ -2,13 +2,24 @@
 Mandelbrot visualization using WASM for major calculations.
 
 ## Requirements
-- Node, Rust
-1. `npm install` Node dependencies
+Requires Node and Rust.
+Install Node dependencies:
+```
+npm install
+```
+Build the Rust WASM package in `rs/`:
+```
+npm run wasm
+```
 
 ## Usage
 ### Development
-- `npm run dev` to run the Vite development server.
-    - Note: Any edits to WASM don't trigger Vite's hot reload, so they must be rebuilt by running the command again.
+Builds WASM, then runs the Vite development server.
+```
+npm run dev
+```
+Note: Any edits to WASM don't trigger Vite's hot reload, so they must be rebuilt which can be done by running the command again.
 
 ### Build
-- `npm build` -> `dist/`
+Builds WASM and bundles the application (via Vite).
+`npm run build`

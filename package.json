@@ -10,6 +10,6 @@
   "scripts": {
     "wasm": "wasm-pack build ./rs --target web",
     "dev": "npm run wasm && vite",
-    "build": "vite build"
+    "build": "npm run wasm && vite build"
   }
 }
