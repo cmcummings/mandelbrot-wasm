@@ -1,12 +1,16 @@
 # Mandelbrot (WASM)
-Mandelbrot visualization using WASM for major calculations.
+Mandelbrot visualization using WebAssembly for major calculations.
+
+## Requirements
+- Requires Node, NPM, Rust, Cargo.
+- Requires [wasm-pack](https://github.com/rustwasm/wasm-pack) for building Rust to WebAssembly.
 
 ## Installation
 Install NPM packages:
 ```
 npm install
 ```
-Build the Rust WASM package found in `rs/`:
+Build the Rust WebAssembly package found in `rs/`:
 ```
 npm run wasm
 ```
@@ -16,10 +20,10 @@ npm run wasm
 ```
 npm run dev
 ```
-This command builds the WASM and then runs the Vite development server. Any edits to WASM don't trigger Vite's hot reload, so they must be rebuilt which can be done by running the command again.
+This command builds the WASM package and then runs the Vite development server. Any edits to WASM don't trigger Vite's hot reload, so they must be rebuilt which can be done by running the command again.
 
 ### Build
 ```
 npm run build
 ```
-This command builds WASM and bundles the application (via Vite).
+This command builds the WASM package and bundles the application (via Vite) to `dist/.
