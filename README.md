@@ -22,4 +22,6 @@ Note: Any edits to WASM don't trigger Vite's hot reload, so they must be rebuilt
 
 ### Build
 Builds WASM and bundles the application (via Vite).
-`npm run build`
+```
+npm run build
+```
