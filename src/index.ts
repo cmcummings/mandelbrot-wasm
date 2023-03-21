@@ -54,8 +54,8 @@ class MandelbrotWorker {
 }
 
 class SelectionBox {
-  private start: Vector2;
-  private end: Vector2; 
+  private start: Vector2 = [0, 0];
+  private end: Vector2 = [0, 0]; 
 
   public setStartPosition(pos: Vector2) {
     this.start = pos; 
