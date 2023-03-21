@@ -1,0 +1,15 @@
+{
+  "name": "rs",
+  "collaborators": [
+    "Connor Cummings <cmcummings2003@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "rs_bg.wasm",
+    "rs.js",
+    "rs.d.ts"
+  ],
+  "module": "rs.js",
+  "types": "rs.d.ts",
+  "sideEffects": false
+}

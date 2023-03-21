@@ -24,6 +24,7 @@ This command builds the WASM package and then runs the Vite development server. 
 
 ### Build
 ```
+npm run wasm
 npm run build
 ```
-This command builds the WASM package and bundles the application (via Vite) to `dist/.
+Build the WASM package, then bundle the application (via Vite) to `dist/.
