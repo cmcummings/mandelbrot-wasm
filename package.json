@@ -11,5 +11,8 @@
     "wasm": "wasm-pack build ./rs --target web",
     "dev": "npm run wasm && vite",
     "build": "npm run wasm && vite build"
+  },
+  "dependencies": {
+    "@catppuccin/palette": "^0.1.7"
   }
 }

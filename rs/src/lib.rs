@@ -1,17 +1,17 @@
 extern crate cfg_if;
 extern crate wasm_bindgen;
 extern crate num;
+extern crate js_sys;
 
 mod color;
 mod utils;
 
-use std::sync::Mutex;
+use js_sys::Uint8ClampedArray;
 use num::complex::Complex;
 use crate::color::ColorHSV;
 use cfg_if::cfg_if;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::Clamped;
-use web_sys::{CanvasRenderingContext2d, ImageData};
 
 cfg_if! {
   if #[cfg(feature = "wee_alloc")] {
@@ -59,14 +59,13 @@ fn get_mb_color_hsv(
 
 #[wasm_bindgen]
 pub fn draw_mandelbrot(
-  ctx: &CanvasRenderingContext2d,
   width: u32,
   height: u32,
   x_min: f64,
   x_max: f64,
   y_min: f64,
   y_max: f64
-) -> Result<ImageData, JsValue> {
+) -> Result<Uint8ClampedArray, JsValue> {
   // Generate image data
   let mut data = Vec::new(); // Flattened RGBA color data
   for i in 0..height {
@@ -84,7 +83,6 @@ pub fn draw_mandelbrot(
   }  
 
   // Draw image on canvas
-  Ok(ImageData::new_with_u8_clamped_array_and_sh(Clamped(&data), width, height)?)
-  // ctx.put_image_data(&image_data, 0.0, 0.0)
+  Ok(Uint8ClampedArray::from(&data[..]))
 }
 
