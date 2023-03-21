@@ -54,7 +54,6 @@ class MandelbrotWorker {
 }
 
 class SelectionBox {
-  public visible: boolean;
   private start: Vector2;
   private end: Vector2; 
 
@@ -86,7 +85,6 @@ class SelectionBox {
   }
 
   public draw(ctx: CanvasRenderingContext2D) { 
-    if (!this.visible) return;
     ctx.strokeStyle = "#FFFFFFFF";
     ctx.beginPath();
     ctx.rect(this.start[0], this.start[1], this.end[0] - this.start[0], this.end[1] - this.start[1]);
